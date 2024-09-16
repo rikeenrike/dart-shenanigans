@@ -12,6 +12,4 @@ class BooksView {
       print(book);
     }
   }
-
-
 }

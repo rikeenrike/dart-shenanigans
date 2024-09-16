@@ -11,6 +11,8 @@ class UsersController {
   void addUser({required String name, required int age}) {
     final User newUser = User(name: name, age: age);
     _users.add(newUser);
+    print("User added: $newUser");
+    print(_users);
     // print("User added: $newUser");
   }
 
@@ -32,6 +34,15 @@ class UsersController {
     } else {
       // print("User not found");
     }
+  }
+
+  User ? findUserByName(String name) {
+    for (final user in _users) {
+      if (user.name == name) {
+        return user;
+      }
+    }
+    return null;
   }
 
 

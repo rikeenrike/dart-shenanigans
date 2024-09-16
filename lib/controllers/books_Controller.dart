@@ -35,4 +35,13 @@ class BooksController {
     }
   }
 
+  Books? findBookByTitle(String title) {
+    for (final book in _books) {
+      if (book.title == title) {
+        return book;
+      }
+    }
+    return null;
+  }
+
 }
